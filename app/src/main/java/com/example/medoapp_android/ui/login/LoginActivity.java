@@ -3,6 +3,7 @@ package com.example.medoapp_android.ui.login;
 import android.app.Activity;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
@@ -21,6 +22,7 @@ import android.widget.Toast;
 import com.example.medoapp_android.R;
 import com.example.medoapp_android.ui.login.LoginViewModel;
 import com.example.medoapp_android.ui.login.LoginViewModelFactory;
+import com.example.medoapp_android.ui.workspace.WorkspaceActivity;
 
 import me.ibrahimsn.particle.ParticleView;
 
@@ -133,8 +135,14 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void updateUiWithUser(LoggedInUserView model) {
-        String welcome = getString(R.string.welcome) + model.getDisplayName();
-        // TODO : initiate successful logged in experience
+
+        // initiate successful logged in experience
+        // can now initialize intent and go to ViewSCan Activity Page
+        Intent intent = new Intent(this, WorkspaceActivity.class);
+        startActivity(intent);
+
+        // send greeting to user
+        String welcome = getString(R.string.login_success_string) + model.getDisplayName();
         Toast.makeText(getApplicationContext(), welcome, Toast.LENGTH_LONG).show();
     }
 
