@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MedoApp_Android</string>
+    <string name="title_activity_login">Welcome</string>
+    <string name="medo_logo">MEDO</string>
+    <string name="prompt_email">enter username</string>
+    <string name="prompt_password">enter password</string>
+    <string name="action_sign_in">Login</string>
+    <string name="action_sign_in_short">Sign in or Register</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+</resources>
